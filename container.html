@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Converter</title>
+    <link rel="import" href="component/currencyComponent.html" >
+
+    <link rel="stylesheet" type="text/css" href="./css/currencyConverter.css">
+    <script>
+        var fixerAddress = "http://api.fixer.io/latest";
+    </script>
+</head>
+<body>
+<script>
+    var htmlImport = document.querySelector('link[rel="import"]');
+    var htmlDoc = htmlImport.import;
+    var htmlMessage = htmlDoc.querySelector('.currencyComponent');
+    var clone;
+    try {
+        for (var i = 1; i<=3; i++) {
+            clone = htmlMessage.cloneNode(true)
+            clone.id = i.toString();
+            document.body.appendChild(clone);
+        }
+    } catch(e) {
+        console.log(e);
+    }
+</script>
+<script src="js/currencyConverter.js"></script>
+</body>
+</html>

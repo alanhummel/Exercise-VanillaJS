@@ -1,0 +1,45 @@
+/* The CSS */
+
+
+body, html {
+    background:#ffffff;
+    text-align:left;
+    padding:0px 0;
+    font-family: "Arial", Arial, Sans-serif;
+
+}
+
+select {
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+    width: 120px;
+    height: 30px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px darkgrey;
+    overflow: hidden;
+    background: lightgrey url("../img/select-arrows-30.png") no-repeat 90% 50%;
+
+    -webkit-appearance: none;
+    font-size: 15px;
+}
+
+.container {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+.container:after {
+    padding-top: 56.25%;
+    /* 16:9 ratio */
+    display: block;
+    content: '';
+}
+
+input{
+    padding: 5px 8px;
+    width: 150px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 15px;
+}

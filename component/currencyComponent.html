@@ -1,0 +1,21 @@
+<div class="currencyComponent">
+    <h1>Currency Converter</h1>
+    <p>Type in amount and select currency:</p>
+    <input type="text" id="inputValue" oninput = "calculateCurrency()" value="0.00"/>
+
+    <select id="inputCurrency" onchange="onChangeInputCurrency(this.value)">
+        <option value="CAD">CAD</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+    </select>
+
+    <p>Converted amount:</p>
+    <input type="text" id="outputValue" value="0.00" disabled/>
+
+    <select id="outputCurrency" onchange="onChangeOutputCurrency(this.value)">
+        <option value="CAD">CAD</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+    </select>
+
+</div>
