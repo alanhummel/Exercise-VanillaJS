@@ -25,8 +25,9 @@ select {
 
 .container {
     width: 100%;
-    display: inline-block;
+    display: table;
     position: relative;
+    overflow: hidden;
 }
 .container:after {
     padding-top: 56.25%;
@@ -42,4 +43,10 @@ input{
     border: 1px solid #ccc;
     border-radius: 3px;
     font-size: 15px;
+}
+
+.boxDiv {
+    width: 325px;
+    border: 1px solid black ;
+    padding: 25px;
 }
