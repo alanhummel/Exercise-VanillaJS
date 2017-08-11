@@ -95,4 +95,10 @@ function calculateCurrency() {
         .toFixed(2);
 }
 
+function showDisclaimer() {
+    alert("Latest update: " + currencyJSONData.date + "\n" +
+        "\nThe information is provided by fixer.io" +
+        "\nAll rights reserved.");
+}
+
 initialize();
