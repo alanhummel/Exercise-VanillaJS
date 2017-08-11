@@ -5,23 +5,29 @@
     <title>Currency Converter</title>
     <link rel="import" href="component/currencyComponent.html" >
 
+ <script>
+
+ </script>
+
     <link rel="stylesheet" type="text/css" href="./css/currencyConverter.css">
-    <script>
-        var fixerAddress = "http://api.fixer.io/latest";
-    </script>
 </head>
 <body>
-        <script>
-            var htmlImport = document.querySelector('link[rel="import"]');
-            var htmlDoc = htmlImport.import;
-            var htmlMessage = htmlDoc.querySelector('.currencyComponent');
+<script>
+    function includeCurrencyConverterComponent() {
+        var htmlImport = document.querySelector('link[rel="import"]');
+        var htmlDoc = htmlImport.import;
+        var htmlMessage = htmlDoc.querySelector('.currencyComponent');
 
-            try {
-                document.body.appendChild(htmlMessage.cloneNode(true));
-            } catch(e) {
-                console.log(e);
-            }
-        </script>
-        <script src="js/currencyConverter.js"></script>
+        try {
+            document.body.appendChild(htmlMessage.cloneNode(true));
+        } catch(e) {
+            console.log(e);
+        }
+    }
+    includeCurrencyConverterComponent();
+    var fixerAddress = "http://api.fixer.io/latest";
+</script>
+
+<script src="js/currencyConverter.js"></script>
 </body>
 </html>
