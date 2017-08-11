@@ -9,6 +9,14 @@ body, html {
 
 }
 
+a {
+    display: block;
+    padding: 0 65px 0 0;
+    text-decoration: none;
+    width:100%;
+    text-align:right;
+}
+
 select {
     padding: 5px 8px;
     border: 1px solid #ccc;
