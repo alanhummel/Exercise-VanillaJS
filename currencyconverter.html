@@ -3,31 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Currency Converter</title>
-    <link rel="import" href="component/currencyComponent.html" >
-
- <script>
-
- </script>
 
     <link rel="stylesheet" type="text/css" href="./css/currencyConverter.css">
 </head>
 <body>
-<script>
-    function includeCurrencyConverterComponent() {
-        var htmlImport = document.querySelector('link[rel="import"]');
-        var htmlDoc = htmlImport.import;
-        var htmlMessage = htmlDoc.querySelector('.currencyComponent');
+<!--<link rel="import" href="component/currencyComponent.html">-->
+<!--<script src="js/componentCloner.js"></script>-->
 
-        try {
-            document.body.appendChild(htmlMessage.cloneNode(true));
-        } catch(e) {
-            console.log(e);
-        }
-    }
-    includeCurrencyConverterComponent();
+<script>
     var fixerAddress = "http://api.fixer.io/latest";
+
+//    includeCurrencyConverterComponent();
 </script>
 
+<script src="js/currencyConverter.js"></script>
+<div class="currencyComponent boxDiv">
+    <h1>Currency Converter</h1>
+    <p>Type in amount and select currency:</p>
+    <input type="text" id="inputValue" oninput = "calculateCurrency()" value="0.00"/>
+
+    <select id="inputCurrency" onchange="onChangeInputCurrency(this.value)">
+        <option value="CAD">CAD</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+    </select>
+
+    <p>Converted amount:</p>
+    <input type="text" id="outputValue" value="0.00" disabled/>
+
+    <select id="outputCurrency" onchange="onChangeOutputCurrency(this.value)">
+        <option value="CAD">CAD</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+    </select>
+    <p>
+        <a href="#" onclick="showDisclaimer();">Disclaimer</a>
+    </p>
+</div>
 <script src="js/currencyConverter.js"></script>
 </body>
 </html>
